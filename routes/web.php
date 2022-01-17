@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Validator;
 Route::get('/', function () {
     return redirect(\route('home'));
 });
-
+Route::get('/request', function () {
+    return view('request');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
