@@ -23,6 +23,9 @@ Route::get('/', function () {
 Route::get('/request', function () {
     return view('request');
 });
+Route::get('/feedback', function () {
+    return view('feedback');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
